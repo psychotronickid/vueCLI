@@ -48,5 +48,15 @@ export default createStore({
                 localStorage.removeItem('MyAppToken');
             }
         },
+        async SIGN_OUT() {
+            this.state.token = ''
+            localStorage.removeItem('MyAppToken')
+            await axios.post(this.state.API + `logout`, {
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8',
+                    'Authorization': 'Bearer ' + this.state.token
+                }
+            })
+        },
     }
 })

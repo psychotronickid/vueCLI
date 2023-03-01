@@ -20,7 +20,7 @@ const ifAuthenticated = (to, from, next) => {
 
 const routes = [
     {
-        path: '/home',
+        path: '/',
         name: 'home',
         component: function () {
             return import('@/views/HomeView.vue');
@@ -42,6 +42,13 @@ const routes = [
         },
         beforeEnter: ifNotAuthenticated,
     },
+    {
+        path: '/logout',
+        name: 'logout',
+        component: function () {
+            return import('@/components/SignOut.vue');
+        }
+    }
 ]
 
 const router = createRouter({

@@ -4,12 +4,25 @@
     <router-link to="catalog">Catalog</router-link>
     <router-link to="cart">Cart</router-link>
     <router-link to="orders">Orders</router-link>
-    <router-link to="logout">Sign Out</router-link>
+    <router-link to="logout" @click="logout">Sign Out</router-link>
     <router-link to="login">Sign In</router-link>
     <router-link to="register">Sign Up</router-link>
+<!--    <router-link v-if="this.$store.state.token" to="logout" @click="logout">Sign Out</router-link>-->
+<!--    <router-link v-if="!this.$store.state.token" to="login">Sign In</router-link>-->
+<!--    <router-link v-if="!this.$store.state.token" to="register">Sign Up</router-link>-->
   </nav>
   <router-view/>
 </template>
+
+<script>
+export default {
+  methods: {
+    logout(){
+      this.$store.dispatch('SIGN_OUT')
+    }
+  },
+}
+</script>
 
 <style>
 #app {
