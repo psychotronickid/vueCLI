@@ -11,6 +11,7 @@
 <!--    <router-link v-if="!this.$store.state.token" to="login">Sign In</router-link>-->
 <!--    <router-link v-if="!this.$store.state.token" to="register">Sign Up</router-link>-->
   </nav>
+  <hr/>
   <router-view/>
 </template>
 
@@ -28,7 +29,8 @@ export default {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
-  color: #6c6e69;
+  /*color: #6c6e69;*/
+  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,10 +46,10 @@ nav {
 }
 nav a {
   font-weight: bold;
-  color: #6c6e69;
+  color: white;
   text-decoration: none
 }
 nav a.router-link-exact-active {
-  color: white;
+  color: #b393d3;
 }
 </style>

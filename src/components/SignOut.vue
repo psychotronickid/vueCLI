@@ -9,5 +9,7 @@ export default {
 </script>
 
 <style scoped>
-
+  h3 {
+    padding: 70px;
+  }
 </style>

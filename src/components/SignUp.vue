@@ -59,8 +59,8 @@ export default {
 }
 .shape:first-child{
   background: linear-gradient(
-      #1845ad,
-      #23a2f6
+      #553c9a,
+      #b393d3
   );
   left: -80px;
   top: -80px;
@@ -68,8 +68,8 @@ export default {
 .shape:last-child{
   background: linear-gradient(
       to right,
-      #ff512f,
-      #f09819
+      #b393d3,
+      #553c9a
   );
   right: -30px;
   bottom: -80px;
