@@ -23,14 +23,22 @@ const routes = [
         path: '/home',
         name: 'home',
         component: function () {
-            return import('../views/HomeView.vue');
+            return import('@/views/HomeView.vue');
         },
     },
     {
         path: '/login',
         name: 'login',
         component: function () {
-            return import('../components/Login.vue')
+            return import('@/components/Login.vue')
+        },
+        beforeEnter: ifNotAuthenticated,
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: function () {
+            return import('@/components/SignUp.vue');
         },
         beforeEnter: ifNotAuthenticated,
     },

@@ -1,12 +1,12 @@
 <template>
   <nav>
-    <router-link to="/home">Home</router-link>
-    <router-link to="/catalog">Catalog</router-link>
-    <router-link to="/cart ">Cart</router-link>
-    <router-link to="/orders">Orders</router-link>
-    <router-link to="/logout">Sign Out</router-link>
-    <router-link to="/login">Sign In</router-link>
-    <router-link to="/register">Register</router-link>
+    <router-link to="/">Home</router-link>
+    <router-link to="catalog">Catalog</router-link>
+    <router-link to="cart">Cart</router-link>
+    <router-link to="orders">Orders</router-link>
+    <router-link to="logout">Sign Out</router-link>
+    <router-link to="login">Sign In</router-link>
+    <router-link to="register">Sign Up</router-link>
   </nav>
   <router-view/>
 </template>

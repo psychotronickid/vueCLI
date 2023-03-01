@@ -3,13 +3,13 @@
     <div class="shape"></div>
     <div class="shape"></div>
   </div>
-  <form class="login" @submit.prevent="register">
+  <form class="login" @submit.prevent="signup">
     <h3>Register</h3>
     <label for="username">Username</label>
     <input type="text" placeholder="Username" id="username" required v-model="username"/>
     <label for="password">Password</label>
     <input type="password" placeholder="Password" id="password" required v-model="password"/>
-    <button type="submit">Log In</button>
+    <button type="submit">Sign Up</button>
   </form>
 </template>
 
@@ -22,7 +22,7 @@ export default {
     };
   },
   methods: {
-    register() {
+    signup() {
       const userData = {
         username: this.username,
         password: this.password,

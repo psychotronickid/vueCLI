@@ -1,9 +1,11 @@
 import { createStore } from 'vuex'
-import { loginRequest } from "@/utils/api.js";
+import axios from "axios";
+import router from "@/router";
 
 export default createStore({
     state: {
         token: localStorage.getItem('myAppToken') || '',
+        API: 'https://jurapro.bhuser.ru/api-shop/',
     },
     getters: {
         isAuthenticated: (state) => !!state.token,
@@ -17,19 +19,34 @@ export default createStore({
         },
     },
     actions: {
-        AUTH_REQUEST: ({ commit }, user) => {
-            return new Promise((resolve, reject) => {
-                loginRequest(user).then((token) => {
-                        commit('AUTH_SUCCESS', token);
-                        localStorage.setItem('myAppToken', token);
-                        resolve();
-                    })
-                    .catch(() => {
-                        commit('AUTH_ERROR');
-                        localStorage.removeItem('myAppToken');
-                        reject();
-                    });
-            });
-        }
+        async LOGIN({commit}, user) {
+            try {
+                await axios.post(this.state.API + 'login', user).then((response) => {
+                    commit('AUTH_SUCCESS', response.data.data.user_token)
+                    if (this.state.token) {
+                        axios.defaults.headers.common["Authorization"] = 'Bearer ' + this.state.token
+                    } else {
+                        axios.defaults.headers.common["Authorization"] = ''
+                    }
+                    localStorage.setItem('MyAppToken', this.state.token)
+                    router.push('/')
+                })
+            } catch (e) {
+                commit('AUTH_ERROR');
+                localStorage.removeItem('MyAppToken');
+            }
+        },
+        async REGISTER({commit}, user) {
+            try {
+                await axios.post(this.state.API + 'signup', user).then((response) => {
+                    commit('AUTH_SUCCESS', response.data.data.user_token)
+                    localStorage.setItem('MyAppToken', this.state.token)
+                    router.push('/')
+                })
+            } catch (e) {
+                commit('AUTH_ERROR');
+                localStorage.removeItem('MyAppToken');
+            }
+        },
     }
 })

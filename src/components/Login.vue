@@ -9,7 +9,7 @@
     <input type="text" placeholder="Username" id="username" required v-model="username"/>
     <label for="password">Password</label>
     <input type="password" placeholder="Password" id="password" required v-model="password"/>
-    <button type="submit">Log In</button>
+    <button type="submit">Sign In</button>
   </form>
 </template>
 
@@ -27,9 +27,7 @@ export default {
         username: this.username,
         password: this.password,
       };
-
-      this.$store
-          .dispatch('AUTH_REQUEST', userData)
+      this.$store.dispatch('LOGIN', userData)
     },
   },
 };
