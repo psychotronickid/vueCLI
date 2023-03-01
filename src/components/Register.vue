@@ -3,8 +3,8 @@
     <div class="shape"></div>
     <div class="shape"></div>
   </div>
-  <form class="login" @submit.prevent="login">
-    <h3>Login</h3>
+  <form class="login" @submit.prevent="register">
+    <h3>Register</h3>
     <label for="username">Username</label>
     <input type="text" placeholder="Username" id="username" required v-model="username"/>
     <label for="password">Password</label>
@@ -22,17 +22,17 @@ export default {
     };
   },
   methods: {
-    login() {
+    register() {
       const userData = {
         username: this.username,
         password: this.password,
       };
 
       this.$store
-          .dispatch('AUTH_REQUEST', userData)
+          .dispatch('REGISTER', userData)
     },
   },
-};
+}
 </script>
 
 <style scoped>

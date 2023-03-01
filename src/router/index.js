@@ -25,7 +25,6 @@ const routes = [
         component: function () {
             return import('../views/HomeView.vue');
         },
-        beforeEnter: ifAuthenticated,
     },
     {
         path: '/login',
