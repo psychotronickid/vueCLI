@@ -5,8 +5,10 @@
   </div>
   <form class="login" @submit.prevent="signup">
     <h3>Register</h3>
-    <label for="username">Username</label>
-    <input type="text" placeholder="Username" id="username" required v-model="username"/>
+    <label for="fio">FIO</label>
+    <input type="text" placeholder="FIO" id="fio" required v-model="fio"/>
+    <label for="email">email</label>
+    <input type="text" placeholder="Email" id="email" required v-model="email"/>
     <label for="password">Password</label>
     <input type="password" placeholder="Password" id="password" required v-model="password"/>
     <button type="submit">Sign Up</button>
@@ -17,14 +19,16 @@
 export default {
   data() {
     return {
-      username: "",
+      fio: "",
+      email: "",
       password: "",
     };
   },
   methods: {
     signup() {
       const userData = {
-        username: this.username,
+        fio: this.fio,
+        email: this.email,
         password: this.password,
       };
 
@@ -62,7 +66,7 @@ export default {
       #b393d3
   );
   left: -80px;
-  top: -80px;
+  top: -100px;
 }
 .shape:last-child{
   background: linear-gradient(
@@ -70,11 +74,11 @@ export default {
       #b393d3,
       #553c9a
   );
-  right: -30px;
-  bottom: -80px;
+  right: -80px;
+  bottom: -100px;
 }
 form{
-  height: 520px;
+  height: 600px;
   width: 400px;
   background-color: rgba(255,255,255,0.13);
   position: absolute;

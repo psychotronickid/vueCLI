@@ -5,8 +5,8 @@
   </div>
   <form class="login" @submit.prevent="login">
     <h3>Login</h3>
-    <label for="username">Username</label>
-    <input type="text" placeholder="Username" id="username" required v-model="username"/>
+    <label for="email">email</label>
+    <input type="text" placeholder="Email" id="email" required v-model="email"/>
     <label for="password">Password</label>
     <input type="password" placeholder="Password" id="password" required v-model="password"/>
     <button type="submit">Sign In</button>
@@ -17,14 +17,14 @@
 export default {
   data() {
     return {
-      username: "",
+      email: "",
       password: "",
     };
   },
   methods: {
     login() {
       const userData = {
-        username: this.username,
+        email: this.email,
         password: this.password,
       };
       this.$store.dispatch('SIGN_IN', userData)
@@ -69,7 +69,7 @@ export default {
       #b393d3,
       #553c9a
   );
-  right: -30px;
+  right: -80px;
   bottom: -80px;
 }
 form{
