@@ -28,8 +28,7 @@ export default {
         password: this.password,
       };
 
-      this.$store
-          .dispatch('REGISTER', userData)
+      this.$store.dispatch('SIGN_UP', userData)
     },
   },
 }
@@ -91,7 +90,7 @@ form{
 form *{
   font-family: 'Poppins',sans-serif;
   color: #ffffff;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.15em;
   outline: none;
   border: none;
 }

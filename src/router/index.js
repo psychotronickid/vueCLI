@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import store from "@/store";
 
 const ifNotAuthenticated = (to, from, next) => {
@@ -47,7 +46,8 @@ const routes = [
         name: 'logout',
         component: function () {
             return import('@/components/SignOut.vue');
-        }
+        },
+        beforeEnter: ifAuthenticated,
     }
 ]
 

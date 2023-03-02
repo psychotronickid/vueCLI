@@ -27,7 +27,7 @@ export default {
         username: this.username,
         password: this.password,
       };
-      this.$store.dispatch('LOGIN', userData)
+      this.$store.dispatch('SIGN_IN', userData)
     },
   },
 };
@@ -89,7 +89,7 @@ form{
 form *{
   font-family: 'Poppins',sans-serif;
   color: #ffffff;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.15em;
   outline: none;
   border: none;
 }

@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h3><p style="display:inline" id="h3__one">Welcome to</p> <p style="display:inline" id="h3__two">My Website</p></h3>
+    <h3><p style="display:inline">Welcome to</p> <p style="display:inline">My Website</p></h3>
+    <img alt="Vue logo" src="../assets/XRfALWVHD-c.jpg">
   </div>
 </template>
 
@@ -25,4 +26,8 @@ h3 {
   -webkit-background-clip: text;
 }
 
+img {
+  width: 1400px;
+  height: 600px;
+}
 </style>

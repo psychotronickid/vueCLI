@@ -19,7 +19,7 @@ export default createStore({
         },
     },
     actions: {
-        async LOGIN({commit}, user) {
+        async SIGN_IN({commit}, user) {
             try {
                 await axios.post(this.state.API + 'login', user).then((response) => {
                     commit('AUTH_SUCCESS', response.data.data.user_token)
@@ -36,7 +36,7 @@ export default createStore({
                 localStorage.removeItem('MyAppToken');
             }
         },
-        async REGISTER({commit}, user) {
+        async SIGN_UP({commit}, user) {
             try {
                 await axios.post(this.state.API + 'signup', user).then((response) => {
                     commit('AUTH_SUCCESS', response.data.data.user_token)
