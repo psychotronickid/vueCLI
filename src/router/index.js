@@ -56,6 +56,22 @@ const routes = [
             return import('@/components/Catalog.vue');
         },
     },
+    {
+        path: '/cart',
+        name: 'cart',
+        component: function () {
+            return import('@/components/Cart.vue');
+        },
+        beforeEnter: ifAuthenticated
+    },
+    {
+        path: '/orders',
+        name: 'orders',
+        component: function () {
+            return import('@/components/Order.vue');
+        },
+        beforeEnter: ifAuthenticated,
+    },
 ]
 
 const router = createRouter({

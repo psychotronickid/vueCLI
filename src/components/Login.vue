@@ -57,7 +57,7 @@ export default {
 }
 .shape:first-child{
   background: linear-gradient(
-      #553c9a,
+      #651c9a,
       #b393d3
   );
   left: -80px;
@@ -67,7 +67,7 @@ export default {
   background: linear-gradient(
       to right,
       #b393d3,
-      #553c9a
+      #651c9a
   );
   right: -80px;
   bottom: -80px;

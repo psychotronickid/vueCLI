@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h3><p style="display:inline">Welcome to</p> <p style="display:inline">My Website</p></h3>
+    <h3>Welcome to My Website</h3>
+    <p>On this website you can order any products</p>
   </div>
 </template>
 
@@ -20,13 +21,16 @@ export default {
 h3 {
   font-size: 70px;
   font-weight: 600;
-  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  background-image: linear-gradient(to left, #651c9a, #b393d3);
   color: transparent;
   -webkit-background-clip: text;
 }
 
-img {
-  width: 1400px;
-  height: 600px;
+p {
+  font-size: 30px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #651c9a, #b393d3);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 </style>

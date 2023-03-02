@@ -27,5 +27,17 @@ export default {
 </script>
 
 <style scoped>
-
+* {
+  font-family: 'Poppins',sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  outline: none;
+  border: none;
+}
+h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
 </style>

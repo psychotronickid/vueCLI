@@ -2,9 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link>
     <router-link to="catalog">Catalog</router-link>
-    <router-link to="cart">Cart</router-link>
-    <router-link to="orders">Orders</router-link>
-
+    <router-link v-if="this.$store.state.token" @click="toCart" to="cart">Cart</router-link>
+    <router-link v-if="this.$store.state.token" @click="toOrder" to="orders">Orders</router-link>
     <router-link v-if="this.$store.state.token" to="logout" @click="logout">Sign Out</router-link>
     <router-link v-if="!this.$store.state.token" to="login">Sign In</router-link>
     <router-link v-if="!this.$store.state.token" to="register">Sign Up</router-link>
@@ -18,6 +17,12 @@ export default {
   methods: {
     logout(){
       this.$store.dispatch('SIGN_OUT')
+    },
+    toCart() {
+      this.$store.dispatch('GET_CART')
+    },
+    toOrder() {
+      this.$store.dispatch('GET_ORDER')
     }
   },
 }
