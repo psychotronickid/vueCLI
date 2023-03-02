@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <h3><p style="display:inline">Welcome to</p> <p style="display:inline">My Website</p></h3>
-    <img alt="Vue logo" src="../assets/XRfALWVHD-c.jpg">
   </div>
 </template>
 

@@ -48,7 +48,14 @@ const routes = [
             return import('@/components/SignOut.vue');
         },
         beforeEnter: ifAuthenticated,
-    }
+    },
+    {
+        path: '/catalog',
+        name: 'catalog',
+        component: function () {
+            return import('@/components/Catalog.vue');
+        },
+    },
 ]
 
 const router = createRouter({
