@@ -2,7 +2,7 @@
   <div class="cart">
 
     <div class="order">
-      <h3>Оформить заказ</h3>
+      <h3>Корзина</h3>
       <p>В корзине: {{$store.state.cart.length}} товаров</p>
       <p>Общая сумма заказа:  {{ totalAmount }}</p>
       <button class="btn_order" @click="toCard">Place an order</button>
