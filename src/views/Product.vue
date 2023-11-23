@@ -4,7 +4,7 @@
     <p>{{ prodData.description }}</p>
     <div class="product__price">
       <p>Price: {{ prodData.price }}</p>
-      <button @click="addToCart(prodData)" v-if="this.$store.state.token">To cart</button>
+      <button @click="addToCart(prodData)" v-if="this.$store.state.token">В корзину</button>
     </div>
   </div>
 </template>

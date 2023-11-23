@@ -5,7 +5,7 @@
       <h3>Корзина</h3>
       <p>В корзине: {{$store.state.cart.length}} товаров</p>
       <p>Общая сумма заказа:  {{ totalAmount }}</p>
-      <button class="btn_order" @click="toCard">Place an order</button>
+      <button class="btn_order" @click="toCard">Оформить заказ</button>
     </div>
     <div class="cart__inner" v-if="$store.state.cart.length > 0">
       <cart-view></cart-view>
